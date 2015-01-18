@@ -1,0 +1,9 @@
+.tab li{
+    display: inline;
+    border: 1px green outset;
+}
+
+.tab .content {
+    height: 500px;
+    border: 1px orange solid;
+}

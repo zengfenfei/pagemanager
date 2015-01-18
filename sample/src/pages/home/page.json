@@ -1,0 +1,5 @@
+{
+    "preload": true,
+    "html": "page.html",
+    "js": "page"
+}

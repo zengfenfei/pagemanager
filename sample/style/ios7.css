@@ -1,0 +1,64 @@
+
+.ios7{
+    margin: 0;
+    padding: 0 0 60px 0;
+    -webkit-font-smoothing: antialiased;
+    font-size: 34px;
+    font-family: "Helvetica Neue",sans-serif;
+    background-color: #efeff4;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.ios7 .page-title {
+    background-color: #f7f7f7;
+    border-bottom: 1px #b2b2b2 solid;
+    text-align: center;
+    line-height: 88px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.ios7 .group {
+    margin: 60px 0 10px 0;
+}
+
+.ios7 .group>.title{
+    text-transform: uppercase;
+    padding: 15px 30px;
+}
+
+.ios7 .group>ul {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #c8c7cc;
+    border-top: 1px solid #c8c7cc;
+    background-color: #fff;
+}
+
+.ios7 .group>ul>li {
+    /*line-height: 88px;*/
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+/*touchscreen hover effect*/
+.ios7 .group>ul>li.touching {
+    background-color: #d9d9d9;
+}
+
+.ios7 .group>ul>li>a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #c8c7cc;
+    margin-left: 36px;
+    margin-bottom: -1px;
+    line-height: 55px;
+    padding: 16px 0;
+}
+
+.ios7 .group>ul>li:last-child>a {
+    border-bottom: none;
+}
+

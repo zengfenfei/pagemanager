@@ -1,0 +1,16 @@
+.page-container {
+    position: relative;
+}
+
+.page-container>div {
+    /*display: none;*/
+    overflow: auto;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: inherit;
+}
+
+/*.page-container>div.current {
+    display: block;
+}*/

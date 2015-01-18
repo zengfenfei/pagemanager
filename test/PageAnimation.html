@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html;charset=UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimal-ui,target-densityDpi=device-dpi"/>
+    <title>页面动画测试</title>
+    <style type="text/css">
+    .page-container {
+        position: relative;
+        width: 90%;
+        height: 300px;
+        border: 1px gray inset;
+        overflow: hidden;
+    }
+    .page-container > div{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: none;
+    }
+    .page-container > div.current {
+        display: block;
+    }
+
+    #old-page {
+        background: green;
+    }
+    #new-page {
+        background-color: orange;
+    }
+    button {
+        font-size: larger;
+    }
+    </style>
+
+
+</head>
+<body class='ios7'>
+
+    <h1>页面切换动画</h1>
+
+<div id='btns'></div>
+
+<div class="page-container">
+<div id='old-page' class="current">
+<h1>The Old Page</h1>
+
+<h1>The Old Page</h1>
+
+</div>
+
+<div id='new-page'>
+    <h1>The new page.</h1>
+    <h1>The new page.</h1>
+</div>
+</div>
+
+<script type="text/javascript" src="../lib/require.js"></script>
+<script type="text/javascript" defer="defer">
+require(['../lib/pagemanager/PageAnimation.js'], function (PageAnimations) {
+    var btns = document.getElementById('btns');
+    for(var ani in PageAnimations) {
+        var btn = createAniBtn(ani, PageAnimations);
+        btns.appendChild(btn);
+    }
+    console.log(PageAnimations);
+
+});
+
+var oldPage = document.getElementById('old-page');
+var newPage = document.getElementById('new-page');
+        function createAniBtn (ani, PageAnimations) {
+            var btn = document.createElement('button');
+            btn.textContent = ani;
+            btn.onclick = function () {
+
+                PageAnimations[ani](oldPage, newPage, function () {
+                    var tmp = oldPage;
+                    oldPage = newPage;
+                    newPage = tmp;
+                });
+
+                oldPage.classList.remove('current');
+                newPage.classList.add('current');
+            }
+            return btn;
+        }
+    </script>
+</body>
+</html>

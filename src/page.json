@@ -1,0 +1,8 @@
+{
+    "preload": true,
+    "standalone": true,
+    "html": "page.html",
+    "css": ["page.css"],
+    "js": "page",
+    "fullscreen": "false"
+}

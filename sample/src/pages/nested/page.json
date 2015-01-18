@@ -1,0 +1,6 @@
+{
+    "preload": true,
+    "html": "tab.html",
+    "css": ["tab.css"],
+    "js": "frame"
+}
