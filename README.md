@@ -72,13 +72,6 @@ requirejs(+text plugin), zepto(modules: zepto event fx)
 
 * 页面配置文件集中一个js文件，不用json方便注释和打包，同时可供打包工具使用
 * 页面创建方式更简单
-* +$Cell
 * 保留独立css文件？
-
-# Issues
-
-* QQ Webivew 路由异常
+* QQ Webivew 可能存在路由异常
 * Page创建方式，配置文件，api？
-* 模块css对全局有影响，暂不解决，框架的侧重点是分离开发期的模块
-* 配置文件需规范
-* 支持页面值出？？？？
