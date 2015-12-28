@@ -1,9 +1,9 @@
 .page-container {
-    position: relative;
+    /* position: relative; */
 }
 
 .page-container>div {
-    /*display: none;*/
+    visibility: hidden;
     overflow: auto;
     position: absolute;
     height: 100%;
@@ -11,6 +11,6 @@
     background-color: inherit;
 }
 
-/*.page-container>div.current {
-    display: block;
-}*/
+.page-container>div.current {
+    visibility: visible;;
+}
